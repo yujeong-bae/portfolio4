@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+
+/*
+@font-face {
+    font-family: NEXONLv2GothicBold;
+    src: url('../font/NEXONLv2GothicBold.eot') format('eot');
+    src: url('../font/NEXONLv2GothicBold.ttf') format('ttf');
+    src: url('../font/NEXONLv2GothicBold.woff') format('woff');
+}
+*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+
+}
+
+
+header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: #0077ff;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+header.active {
+    background-color: transparent;
+
+}
+
+
+.up {
+    width: 3vw;
+    right: 3vw;
+    bottom: 3vh;
+    position: fixed;
+    z-index: 10;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.up:hover {
+    border-radius: 30%;
+    background-color: #0077ff;
+    transition: 1s all;
+}
+
+header .logo {
+    float: left;
+    width: 10%;
+    margin: 0 0 0 1.2%;
+}
+
+header nav {
+    width: 35%;
+    float: right;
+    margin: 0.7% 0 0 1.2%;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    float: left;
+    margin: 2% 5%;
+}
+
+header nav ul li a {
+    color: #bbb;
+    font-size: 1.4vw;
+    white-space: nowrap;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    transition: 0.5s all;
+}
+
+
+/* section*/
+section {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+#s1 {
+    padding-top: 10vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+#s1 .text_move1 {
+
+    width: 100%;
+    height: 50%;
+}
+
+#s1 .main_txt {
+    padding-left: 10vw;
+    color: #0077ff;
+    font-size: 4vw;
+    margin-top: 0;
+    transition: 0.5s all;
+}
+
+#s1 .main_txt.active {
+    margin-top: 48vh;
+    transition: 0.5s all;
+    color: azure;
+}
+
+#s1 article {
+    position: relative;
+    padding-left: 10vw;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #0077ff;
+    background-image: url(../img/p2.png);
+    background-position: 85% 50%;
+    background-size: 50vw;
+    background-repeat: no-repeat;
+
+
+}
+
+#s1 article {
+    overflow-y: hidden;
+}
+
+#s1 article .sub_txt {
+    margin-top: -30vh;
+    transition: 0.5s all;
+    color: #fff;
+    font-size: 3vw;
+}
+
+#s1 article .sub_txt.active {
+    margin-top: 1vh;
+    transition: 1s all;
+}
+
+
+#s1 article .Additional {
+    font-size: 1.5vw;
+    margin-top: 10vh;
+    color: darkgray;
+    opacity: 0;
+    transition: 1.5s all;
+}
+
+#s1 .link_container {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-top: 10vh;
+
+}
+
+#s1 .link_container a {
+    width: 3vw;
+    margin-left: 1vw;
+}
+
+#s1 .link_container a img {
+    opacity: 0;
+    transition: 2s all;
+
+}
+
+#s1 .link_container a img.active,
+#s1 .Additional.active {
+    opacity: 1;
+    transition: 2s all;
+}
+
+
+/*sec 2*/
+
+
+#s2 {
+    background-color: darkorange;
+    padding-left: 10vw;
+}
+
+#s2 h2 {
+    margin-top: 10vh;
+    font-size: 3vw;
+}
+
+#s2 p {
+    margin-top: 10vh;
+    font-size: 1vw;
+}
+
+#s2 article {
+    margin-top: 10vh;
+    /*    margin-left: -10vw;*/
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+}
+
+#s2 article .phone_box {
+    width: 10vw;
+    height: 55%;
+    clear: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2vw;
+    transition: 0.5s all;
+    margin-top: 0;    
+}
+
+#s2 article .phone_box.active {    
+    margin-top: 80vh;
+    transition: 0.5s all;
+}
+
+
+
+/*sec3*/
+#s3 {
+    position: relative;
+    background-color: mediumpurple;
+}
+
+#s3 .bg_blur {
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.3);
+    position: absolute;
+    background-image: url(../img/3p.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+
+}
+
+#s3 .s3_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    filter: grayscale(1);
+    transition: 0.5s all;
+}
+
+#s3 .s3_wrap.active {
+    filter: grayscale(0);
+    transition: 0.5s all;
+}
+
+
+#s3 h2 {
+    font-size: 3vw;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+#s3 p {
+    font-size: 1vw;
+    font-weight: 400;
+    color: #fff;
+}
+
+#s3 .btn {
+    width: 10vw;
+    height: 5%;
+    line-height: 200%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2vw;
+    background-color: darkorange;
+    padding-top: 0.1%;
+    box-sizing: border-box;
+}
+
+
+/*sec4 2dimention*/
+#s4 {
+    height: 60vh;
+    background-color: gray;
+    padding-left: 10vw;
+}
+
+#s4 h2 {
+    margin-top: 10vh;
+    font-size: 3vw;
+    color: #fff;
+}
+
+#s4 nav > ul {
+    margin-top: 5vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+#s4 nav p {
+    font-size: 1.2vw;
+    color: #bbb;
+}
+
+#s4 nav > ul > li {
+    font-size: 1.6vw;
+}
+
+#s4 nav .sub_dimention {
+    opacity: 0.1;
+    filter: blur(1);
+    transition: 1s all;
+}
+
+#s4 nav .sub_dimention.active {
+    opacity: 1;
+    filter: blur(0);
+    transition: 1s all;
+}
+
+#s4 nav .sub_dimention li {
+    font-size: 0.8vw;
+    margin-top: 1vh;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    height: 40vh;
+    background-color: #333;
+}
+
+footer .form {
+    width: 100%;
+    margin-left: 10vw;
+    margin-top: 10vh;
+}
+
+footer .logo {
+    width: 10%;
+}
+
+footer .form {
+    margin-left: 2vw;
+    font-size: 0.8vw;
+    color: darkgrey;
+}
